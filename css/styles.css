@@ -85,7 +85,7 @@ h2
 
 *
 {
-	cursor: url(../images/cursor.png) 25 25, auto;
+	cursor: url(../images/cursor.png) 25 25, crosshair;
 }
 
 .game, canvas
