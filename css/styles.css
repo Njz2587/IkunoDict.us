@@ -83,9 +83,9 @@ h2
 	padding-top: 0.4em;
 }
 
-#body
+*
 {
-		cursor: url(../images/move.png) 42 42,crosshair;
+	cursor: url(../images/cursor.gif) 48 48,crosshair;
 }
 
 .game, canvas
