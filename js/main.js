@@ -370,7 +370,7 @@ function setup() {
 		if (paused) return; // keep this commented out for now
 		
 		// #1 - Calculate "delta time"
-		let dt = 1/app.ticker.FPS;
+		let dt = 1/60;
 		if (dt > 1/12) dt=1/12;						
 			
 		// #2 - Move bear
