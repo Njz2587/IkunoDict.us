@@ -49,7 +49,7 @@ let paused = true; //Toggles if the game is in a scene considered as paused
 
 //Main app function that contains all functions and operations for this application
 function setup() {
-	document.querySelector("#gameP").innerHTML = ``;
+	document.querySelector("p").innerHTML = ``;
 	stage = app.stage;
 	// #1 - Create the `start` scene
 	startScene = new PIXI.Container();
