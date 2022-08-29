@@ -83,10 +83,15 @@ h2
 	padding-top: 0.4em;
 }
 
-*
+
+#cursor1, #cursor2
 {
-	cursor: url(../images/cursor.png) 25 25, crosshair;
+  position:absolute;
+  transform:translate(15%,15%);
+  height:50px;
+  width:50px;
 }
+
 
 .game, canvas
 {
