@@ -1,7 +1,13 @@
+let audioPlayer = document.getElementById("audioPlayer");
+let audioPlayerClick = document.getElementById("AudioPlayerClick");
+
+let dictusSpin = document.getElementById("DictusSpin");
+let getEquipped = document.getElementById("GetEquippedWith");
 
 let cursor1 = document.getElementById("cursor1");
 let cursor2 = document.getElementById("cursor2");
 let toggle = true;
+let toggleMusic = false;
 
 var isMobile = {
             Android: function () {
@@ -63,3 +69,29 @@ else
 	cursor1.style.visibility = 'hidden';
 	cursor2.style.visibility = 'hidden';
 }
+
+function ToggleMusic()
+{
+	if(toggleMusic == false)
+	{
+		audioPlayer.volume = 0.5;
+		audioPlayer.play();
+		audioPlayerClick.style.visibility = 'hidden';
+		dictusSpin.style.visibility = 'visible';
+		getEquipped.style.visibility = 'visible';
+	}
+	else
+	{
+		audioPlayer.pause();
+		audioPlayerClick.style.visibility = 'visible';
+		dictusSpin.style.visibility = 'hidden';
+		getEquipped.style.visibility = 'hidden';
+	}
+	
+	toggleMusic = !toggleMusic;
+}
+
+dictusSpin.style.visibility = 'hidden';
+getEquipped.style.visibility = 'hidden';
+document.addEventListener('click', ToggleMusic);
+
