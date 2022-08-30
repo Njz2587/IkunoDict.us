@@ -6,30 +6,20 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />	
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico">		
-
 	</head>
 	<body>
+		<div id="container">
+			<div id="GetEquippedWith">
+				<img src="images/GetEquippedWith.png">
+				<div id="DictusSpin"><img src="images/DictusSpin.gif"></div>
+			</div>
+		</div>	
 		<div id="cursor1"><img src="images/cursor.png"></div>
 		<div id="cursor2"><img src="images/cursor2.png"></div>
 		<script src="js/cursor.js"></script>
-		<div id="container">
-			<div id="header">		
-			</div>
-			<div class="game">	
-				<p id="gameP">Loading</p>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.6.0/pixi.min.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.5/howler.js"></script>
-				<script src="js/utilities.js"></script>
-				<script src="js/main.js"></script>
-			</div>
-			<div style="border-bottom: 1px solid black; padding-bottom: 3em; margin-right: 4em;"></div>
-			<div class="gameInfo">
-				<h2 style="padding-top: 0.1em; margin-top: 0.1em;">Controls</h2>
-				<p><em>Click/Tap</em> to <em>Jump</em> over enemies!</p>
-				<p><em>Click/Tap again</em>, while in the air, to <em>slam down</em> quickly!</p>
-				<h2 style="padding-top: 0.1em; margin-top: 0.1em;">Extra</h2>
-				<p><em>Hit</em> both the <em>"H" Health and "S" Shield</em> items for a powerup!</p>			
-			</div>		
-		</div>	
+		
+		<audio controls autoplay loop>
+			<source src="sounds/RightRoundMidi.mp3" type="audio/mpeg">
+		</audio>
 	</body>
 </html>
