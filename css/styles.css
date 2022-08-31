@@ -34,7 +34,7 @@ body
 	padding: 30px;
 }
 
-#DictusSpin img
+#DictusSpin img, #DictusTakeOnMe img, #DictusCantGetEnough img
 {
 	position: absolute;
     top: 50%;

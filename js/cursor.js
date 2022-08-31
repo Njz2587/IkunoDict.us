@@ -1,8 +1,12 @@
-let audioPlayer = document.getElementById("audioPlayer");
 let audioPlayerClick = document.getElementById("AudioPlayerClick");
+let audioPlayerRightRound = document.getElementById("audioPlayerRightRound");
+let audioPlayerTakeOnMe = document.getElementById("audioPlayerTakeOnMe");
+let audioPlayerCantGetEnough = document.getElementById("audioPlayerCantGetEnough");
 
-let dictusSpin = document.getElementById("DictusSpin");
 let getEquipped = document.getElementById("GetEquippedWith");
+let dictusSpin = document.getElementById("DictusSpin");
+let dictusTakeOnMe = document.getElementById("DictusTakeOnMe");
+let dictusCantGetEnough = document.getElementById("DictusCantGetEnough");
 
 let cursor1 = document.getElementById("cursor1");
 let cursor2 = document.getElementById("cursor2");
@@ -74,24 +78,51 @@ function ToggleMusic()
 {
 	if(toggleMusic == false)
 	{
-		audioPlayer.volume = 0.5;
-		audioPlayer.play();
 		audioPlayerClick.style.visibility = 'hidden';
-		dictusSpin.style.visibility = 'visible';
 		getEquipped.style.visibility = 'visible';
+		
+		let randomPlay = Math.floor(Math.random() * 3);
+		
+		if(randomPlay == 0)
+		{		
+			audioPlayerRightRound.volume = 0.5;
+			audioPlayerRightRound.play();
+			dictusSpin.style.visibility = 'visible';
+		}
+		else if(randomPlay == 1)
+		{		
+			audioPlayerTakeOnMe.volume = 0.5;
+			audioPlayerTakeOnMe.play();
+			dictusTakeOnMe.style.visibility = 'visible';
+		}
+		else if(randomPlay == 2)
+		{		
+			audioPlayerCantGetEnough.volume = 0.5;
+			audioPlayerCantGetEnough.play();
+			dictusCantGetEnough.style.visibility = 'visible';
+		}
 	}
 	else
 	{
-		audioPlayer.pause();
+		audioPlayerRightRound.pause();
+		audioPlayerTakeOnMe.pause();
+		audioPlayerCantGetEnough.pause();
+		
 		audioPlayerClick.style.visibility = 'visible';
-		dictusSpin.style.visibility = 'hidden';
 		getEquipped.style.visibility = 'hidden';
+		
+		dictusSpin.style.visibility = 'hidden';
+		dictusTakeOnMe.style.visibility = 'hidden';
+		dictusCantGetEnough.style.visibility = 'hidden';
+
 	}
 	
 	toggleMusic = !toggleMusic;
 }
 
 dictusSpin.style.visibility = 'hidden';
+dictusTakeOnMe.style.visibility = 'hidden';
+dictusCantGetEnough.style.visibility = 'hidden';
 getEquipped.style.visibility = 'hidden';
 document.addEventListener('click', ToggleMusic);
 
